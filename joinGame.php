@@ -7,13 +7,16 @@ include('connection.php');
 
 session_start();
 
-if (isset($_SESSION['username']) && isset($_GET['gameid'])) {
-  $user = $_SESSION['username'];
-  $gameid = $_REQUEST['gameid'];
+$data = json_decode($_GET['gameArray']);
+//$user = $data->result[0]->user;
+$user = $_SESSION['username']; 
+$gameid = $data->result[0]->gameid;
+
+
+if (isset($_SESSION['username'])) {
   $db = new Connection();
   $link = $db->connectDatabase();
   $query = "INSERT INTO UserGame VALUES('".$user."', '".$gameid."')";
   $result = mysqli_query($link, $query);
   $db->closeConnection();
-  header('location: index.php');
 }

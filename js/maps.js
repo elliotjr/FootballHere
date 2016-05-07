@@ -34,20 +34,44 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
+    function test() {
+      alert("FU");
+    }
 
 
-    function addMarker(myLatLng, map, title, infowindow) {
+
+    function addMarker(myLatLng, map, title, infowindow, location, user, date, gameid) {
       var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
         title: title
       });
 
-      marker.addListener('click', function() {
+      marker.addListener('mouseover', function() {
           infowindow.open(map, marker);
         });
 
+      marker.addListener('mouseout', function() {
+          infowindow.close();
+        });
+
+      marker.addListener('click', function() {
+        var text = '{ "result" : [{"gameid":"'+gameid+'", "user":"'+user+'"}]}';
+        var obj = JSON.parse(text);
+        //Serialize Data and send to server to be inserted into database
+        console.log(obj.result[0].gameid);
+        $.ajax({
+          type: "GET",
+          data: {gameArray: JSON.stringify(obj)},
+          url: "joinGame.php",
+          success: function(){
+            alert("Added Game")
+          }
+      });
+      });
+
     }
+
 
     function getInfoContent(location, user, date, gameid) {
       var contentString = '<div id="content">'+
@@ -57,10 +81,7 @@ function initMap() {
       '<div id="bodyContent">'+
       '<p>Organised by '+user+'</p>'+
       '<p>Game date: '+date+'</p>'+
-      '<form class="addGame" action="joinGame.php" method="GET">'+
-        '<input hidden type="text" name="gameid" value="'+gameid+'">'+
-        '<input class="rsvpButton" type="submit" name="rsvpButton" value="RSVP Game">'+
-      '</form>'+
+      '<h1>Click Marker to RSVP</h1>'+
       '</div>'+
       '</div>';
       return contentString;
@@ -78,7 +99,7 @@ function initMap() {
             var infowindow = new google.maps.InfoWindow({
               content: getInfoContent(oData[i].location, oData[i].user, oData[i].date, oData[i].game_id)
             });
-            addMarker(myLatLng, map, title, infowindow);
+            addMarker(myLatLng, map, title, infowindow, oData[i].location, oData[i].user, oData[i].date, oData[i].game_id);
           }
         }
     });
@@ -87,6 +108,7 @@ function initMap() {
 
 
 }
+
 
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
