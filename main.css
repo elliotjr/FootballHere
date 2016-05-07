@@ -1,0 +1,337 @@
+/*Eric Meyer's CSS Reset*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {border: 0;font-size: 100%;font: inherit;vertical-align: baseline;margin: 0;padding: 0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display: block}body {line-height: 1}ol,ul {list-style: none}blockquote,q {quotes: none}blockquote:before,blockquote:after,q:before,q:after {content: none}table {border-collapse: collapse;border-spacing: 0}
+/*End CSS Reset*/
+
+@font-face {
+    font-family: 'mosk';
+    src: url('./fonts/mosk_bold_700-webfont.eot');
+    src: url('./fonts/mosk_bold_700-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/mosk_bold_700-webfont.woff2') format('woff2'), url('./fonts/mosk_bold_700-webfont.woff') format('woff'), url('./fonts/mosk_bold_700-webfont.ttf') format('truetype'), url('./fonts/mosk_bold_700-webfont.svg#moskbold_700') format('svg');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'mosk';
+    src: url('./fonts/mosk_normal_400-webfont.eot');
+    src: url('./fonts/mosk_normal_400-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/mosk_normal_400-webfont.woff2') format('woff2'), url('./fonts/mosk_normal_400-webfont.woff') format('woff'), url('./fonts/mosk_normal_400-webfont.ttf') format('truetype'), url('./fonts/mosk_normal_400-webfont.svg#mosk_normal_400regular') format('svg');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'mosk';
+    src: url('./fonts/mosk_thin_100-webfont.eot');
+    src: url('./fonts/mosk_thin_100-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/mosk_thin_100-webfont.woff2') format('woff2'), url('./fonts/mosk_thin_100-webfont.woff') format('woff'), url('./fonts/mosk_thin_100-webfont.ttf') format('truetype'), url('./fonts/mosk_thin_100-webfont.svg#moskthin_100') format('svg');
+    font-weight: 100;
+}
+
+html {
+    background: #480048;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(left bottom, #C04848, #480048);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -moz-linear-gradient(top left, #C04848, #480048);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #C04848, #480048);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    min-height: 100%;
+
+    overflow: hidden;
+}
+
+body {
+    margin-bottom: 40px;
+    font-family: mosk, sans-serif;
+}
+
+noscript{
+    position: fixed;
+    min-height: 300px;
+    min-width: 300px;
+    background-color: #2a2a2a;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 40px;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+noscript h1{
+    font-size: 4em;
+    margin-bottom: 40px;
+}
+
+noscript h2{
+    font-size: 2em;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+noscript p{
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+
+.darkOverlay{
+    background-color: #2a2a2a;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.loginOverlay{
+    width: 300px;
+    height: 360px;
+    padding: 30px;
+    background-color: #C04848;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 11;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    visibility: hidden;
+
+    -webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+}
+
+.visible{
+    visibility: visible;
+}
+
+.loginOverlay h1{
+    text-align: center;
+    font-size: 2.4em;
+    color: white;
+    width: 300px;
+    margin-bottom: 20px;
+
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+}
+
+.loginOverlay form{
+    padding: 20px;
+    font-size: 1.4em;
+}
+
+.loginOverlay input{
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.loginOverlay form p{
+    margin-bottom: 5px;
+    color: white;
+}
+
+.noAccount{
+    text-align: center;
+    color: white;
+    line-height: 1.2em;
+}
+
+.noAccount a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #fdda45;
+    text-decoration: none;
+}
+
+#signupForm{
+    display: none;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+}
+
+header h1 {
+    font-size: 4em;
+    color: white;
+    display: inline-block;
+    font-weight: 100;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    cursor: default;
+}
+
+footer p {
+    text-align: center;
+    font-weight: 100;
+    color: white;
+    margin: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d4d4d4;
+}
+
+#filters {
+    margin-bottom: 10px;
+    padding: 20px 0 5px 0;
+    display: none;
+    background-color: #2a2a2a;
+    background-color: rgba(46, 46, 46, 0.4);
+    -moz-box-shadow:    inset  0  10px 10px -10px #000,
+                        inset  0  -5px 10px -10px #000;
+    -webkit-box-shadow: inset  0  10px 10px -10px #000,
+                        inset  0  -5px 10px -10px #000;
+     box-shadow:        inset  0  10px 10px -10px #000,
+                        inset  0  -5px 10px -10px #000;
+}
+
+#filters nav {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#filters nav a {
+    font-size: 1em;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#toolbar{
+    text-align: center;
+    visibility: hidden;
+}
+
+#toolbar *{
+    display: inline-block;
+}
+
+#toolbar a{
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+#loginButton{
+    color: #fdda45;
+}
+
+.filterButton{
+    color: #fdda45;
+}
+
+.whiteFilterButton{
+    color: white;
+}
+
+#map {
+    position: relative;
+    height: 75vh;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.loginWrap{
+  background: #FFFFFF;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 50px;
+  width: 25%;
+}
+
+form{
+  margin: auto;
+  padding: 40px;
+}
+
+input{
+  margin-top: 10px;
+}
+
+form p {
+  margin-top: 10px;
+}
+
+#yourGames {
+    margin-bottom: 10px;
+    padding: 20px 0 5px 0;
+    display: none;
+    background-color: #2a2a2a;
+    background-color: rgba(46, 46, 46, 0.4);
+    -moz-box-shadow:    inset  0  10px 10px -10px #000,
+                        inset  0  -5px 10px -10px #000;
+    -webkit-box-shadow: inset  0  10px 10px -10px #000,
+                        inset  0  -5px 10px -10px #000;
+     box-shadow:        inset  0  10px 10px -10px #000,
+                        inset  0  -5px 10px -10px #000;
+}
+
+.yourGames {
+  width: 20%;
+  padding-bottom: 10px;
+  margin: 20px;
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.logoutButton {
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:8px 28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.logoutButton:hover {
+	background-color:#eb675e;
+}
+.logoutButton:active {
+	position:relative;
+	top:1px;
+}
