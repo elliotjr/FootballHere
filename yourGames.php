@@ -21,13 +21,16 @@ if (isset($_SESSION['username'])) {
 
   }
 
+
+
   echo "<h2>Games You Are Attending</h2>";
-  $query = "SELECT * FROM UserGame";
+  //$query = "SELECT * FROM UserGame";
+  $query = "SELECT date, kickoff, location, g.user FROM Games g, UserGame u WHERE g.game_id = u.gameid AND u.user = '".$username."';";
   $result = mysqli_query($link, $query);
   while ($row = mysqli_fetch_assoc($result)) {
     echo
     '<div class="yourGames">
-      <h2>'.$row["user"].': '.$row["gameid"].'</h2>
+      <h2>Game starts at '.$row["kickoff"].' on '.$row["date"].' at location '.$row['location'].'. Game hosted by '.$row['user'].'</h2>
     </div>';
   }
 

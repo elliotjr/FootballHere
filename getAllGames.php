@@ -9,7 +9,11 @@ $query = "SELECT * FROM Games";
 $result = mysqli_query($link, $query);
 $resultArray = [];
 while ($row = mysqli_fetch_assoc($result)) {
-  array_push($resultArray, $row);
+  if (( (int) $row['players_needed']) > 0) {
+    array_push($resultArray, $row);
+  } else {
+  }
+
 }
 $db->closeConnection();
 //header( 'Content-Type: application/json' );

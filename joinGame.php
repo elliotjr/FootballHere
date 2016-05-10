@@ -13,14 +13,33 @@ $gameid = $data->result[0]->gameid;
 
 
 //todo - IMPLEMENT THIS METHOD PLZ
-function checkIfAttending($user, $gameid, $arrayOfAttendingGames) {
+function checkIfAttending() {
+}
+
+function needsPlayers($link, $gameid) {
+  $morePlayers = False;
+  $query = "SELECT players_needed FROM Games WHERE game_id = ".$gameid.";";
+  $result = mysqli_query($link, $query);
+  while ($row = mysqli_fetch_assoc($result)) {
+    if (((int) $row['players_needed']) > 0) {
+      $morePlayers = True;
+    } else {
+      $morePlayers = False;
+    }
+  }
+  return $morePlayers;
 }
 
 
 if (isset($_SESSION['username'])) {
   $db = new Connection();
   $link = $db->connectDatabase();
-  $query = "INSERT INTO UserGame VALUES('".$user."', '".$gameid."')";
-  $result = mysqli_query($link, $query);
-  $db->closeConnection();
+  if (needsPlayers($link, $gameid)) {
+    $query = "INSERT INTO UserGame VALUES('".$user."', '".$gameid."')";
+    $result = mysqli_query($link, $query);
+    //decrease number of players needed
+    $query = "UPDATE Games SET players_needed = players_needed - 1 WHERE game_id = ".$gameid.";";
+    $result = mysqli_query($link, $query);
+    $db->closeConnection();
+  }
 }

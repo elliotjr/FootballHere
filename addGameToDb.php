@@ -12,8 +12,9 @@ if(isset($_REQUEST)) {
   $lng = $coordinates[1];
   $db = new Connection();
   $link = $db->connectDatabase();
+  $location = $_REQUEST['state'].", ".$_REQUEST['city'].", ".$_REQUEST['suburb'].", ".$_REQUEST['number']." ".$_REQUEST['street'] ;
   error_reporting(E_ALL && ~E_NOTICE);
-  $query = "INSERT INTO Games VALUES('".$_SESSION['username']."', '".$_REQUEST['location']."', '".$_REQUEST['date']."', '".$_REQUEST['playersneeded']."', '".$_REQUEST['skill']."', DEFAULT, '".$lat."', '".$lng."', '".$_REQUEST['kickoff']."');";
+  $query = "INSERT INTO Games VALUES('".$_SESSION['username']."', '".$location."', '".$_REQUEST['date']."', '".$_REQUEST['playersneeded']."', '".$_REQUEST['skill']."', DEFAULT, '".$lat."', '".$lng."', '".$_REQUEST['kickoff']."');";
   $result = mysqli_query($link, $query);
   echo mysqli_error($link);
   $db->closeConnection();
