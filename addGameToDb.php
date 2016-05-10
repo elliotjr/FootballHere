@@ -13,10 +13,9 @@ if(isset($_REQUEST)) {
   $db = new Connection();
   $link = $db->connectDatabase();
   error_reporting(E_ALL && ~E_NOTICE);
-  $query = "INSERT INTO Games VALUES('".$_SESSION['username']."', '".$_REQUEST['location']."', '".$_REQUEST['date']."', '".$_REQUEST['playersneeded']."', '".$_REQUEST['skill']."', NULL, '".$lat."', '".$lng."');";
-  echo $query;
+  $query = "INSERT INTO Games VALUES('".$_SESSION['username']."', '".$_REQUEST['location']."', '".$_REQUEST['date']."', '".$_REQUEST['playersneeded']."', '".$_REQUEST['skill']."', DEFAULT, '".$lat."', '".$lng."', '".$_REQUEST['kickoff']."');";
   $result = mysqli_query($link, $query);
-  print_r($query);
+  echo mysqli_error($link);
   $db->closeConnection();
   }
 ?>

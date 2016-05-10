@@ -3,7 +3,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 include('connection.php');
-
 $db = new Connection();
 $link = $db->connectDatabase();
 $query = "SELECT * FROM Games";

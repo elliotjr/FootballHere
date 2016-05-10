@@ -1,5 +1,23 @@
 var map;
 
+function getGameAttendances() {
+  $.ajax({
+      url: 'getAllGames.php',
+      dataType: 'json',
+      success: function( oData ) {
+        for (i = 0; i < oData.length; i++) {
+          var latt = parseFloat(oData[i].lat);
+          var lngg = parseFloat(oData[i].lng);
+          var myLatLng = {lat: latt, lng: lngg};
+          var title = oData[i].user + " " + oData[i].location;
+          var infowindow = new google.maps.InfoWindow({
+            content: getInfoContent(oData[i].location, oData[i].user, oData[i].date, oData[i].game_id)
+          });
+          addMarker(myLatLng, map, title, infowindow, oData[i].location, oData[i].user, oData[i].date, oData[i].game_id);
+        }
+      }
+  });
+}
 
 
 function initMap() {
@@ -34,10 +52,6 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    function test() {
-      alert("FU");
-    }
-
 
 
     function addMarker(myLatLng, map, title, infowindow, location, user, date, gameid) {
@@ -58,14 +72,14 @@ function initMap() {
       marker.addListener('click', function() {
         var text = '{ "result" : [{"gameid":"'+gameid+'", "user":"'+user+'"}]}';
         var obj = JSON.parse(text);
-        //Serialize Data and send to server to be inserted into database
-        console.log(obj.result[0].gameid);
         $.ajax({
           type: "GET",
           data: {gameArray: JSON.stringify(obj)},
           url: "joinGame.php",
           success: function(){
-            alert("Added Game")
+            alert("You Are Now Attending This Game");
+            var $game = "<div class='yourGames'><h2>"+user+": "+gameid+"</h2></div>";
+            $("#yourGames").append($game);
           }
       });
       });
@@ -87,6 +101,7 @@ function initMap() {
       return contentString;
     }
 
+
     $.ajax({
         url: 'getAllGames.php',
         dataType: 'json',
@@ -103,10 +118,6 @@ function initMap() {
           }
         }
     });
-
-
-
-
 }
 
 

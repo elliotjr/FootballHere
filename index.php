@@ -36,15 +36,15 @@
             <h1>Add a Game</h1>
 
             <form class="addGame" action="addGameToDb.php" method="post">
-                <input type="text" name="location" value="" placeholder="Location">
 
-                <input type="text" name="state" value="">
-                <input type="text" name="city" value="">
-                <input type="text" name="suburb" value="">
-                <input type="text" name="street" value="">
-                <input type="text" name="number" value="">
+                <input type="text" name="state" value="" placeholder="State">
+                <input type="text" name="city" value="" placeholder="City">
+                <input type="text" name="suburb" value="" placeholder="Suburb">
+                <input type="text" name="street" value="" placeholder="Street">
+                <input type="text" name="number" value="" placeholder="Number">
 
                 <input type="date" name="date" value="">
+                <input type="text" name="kickoff" value="" placeholder="Kick-Off Time (24hr)">
                 <input type="text" name="playersneeded" value="" placeholder="Players Needed">
                 <select name="skill">
                   <option value="1">Beginner</option>

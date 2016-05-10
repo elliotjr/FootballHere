@@ -8,9 +8,13 @@ include('connection.php');
 session_start();
 
 $data = json_decode($_GET['gameArray']);
-//$user = $data->result[0]->user;
-$user = $_SESSION['username']; 
+$user = $_SESSION['username'];
 $gameid = $data->result[0]->gameid;
+
+
+//todo - IMPLEMENT THIS METHOD PLZ
+function checkIfAttending($user, $gameid, $arrayOfAttendingGames) {
+}
 
 
 if (isset($_SESSION['username'])) {
