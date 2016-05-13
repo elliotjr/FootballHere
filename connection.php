@@ -34,6 +34,10 @@
       return $this->myConn;
     }
 
+    function getConnection() {
+      return $this->myConn;
+    }
+
 
 
     /**

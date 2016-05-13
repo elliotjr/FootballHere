@@ -17,7 +17,16 @@ if (isset($_POST['username']) && isset($_POST['password'])){
   $authenticated = false;
   $db = new Connection();
   $link = $db->connectDatabase();
-  $query = "SELECT password FROM Users WHERE Username ='".$_POST['username']."';";
+  $username = mysqli_real_escape_string($link, $_POST['username']);
+  $query = "SELECT password FROM Users WHERE Username ='".$username."';";
+
+  //$query = SELECT password FROM Users WHERE Username = ?";
+  //$stmt = $link->prepare($query);
+  //$stmt->bind_param('ss', $username);
+
+
+
+
   $result = mysqli_query($link, $query);
   $hashedPassword = md5($_POST['password']);
   if (!$result) {

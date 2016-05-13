@@ -14,7 +14,12 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
   $_POST['password'] = md5($_POST['password']);
   $db = new Connection();
   $link = $db->connectDatabase();
-  $query = "INSERT INTO Users VALUES('".$_POST['username']."', '".$_POST['password']."', '".$_POST['fname']."', '".$_POST['lname']."', '".$_POST['skill']."', '".$_POST['age']."');";
+  $username = mysqli_real_escape_string($link, $_POST['username']);
+  $fname = mysqli_real_escape_string($link, $_POST['fname']);
+  $lname = mysqli_real_escape_string($link, $_POST['lname']);
+  $skill = mysqli_real_escape_string($link, $_POST['skill']);
+  $age = mysqli_real_escape_string($link, $_POST['age']);
+  $query = "INSERT INTO Users VALUES('".$username."', '".$_POST['password']."', '".$fname."', '".$lname."', '".$skill."', '".$age."');";
   $result = mysqli_query($link, $query);
   if (!$result) {
     die(mysqli_error($link));

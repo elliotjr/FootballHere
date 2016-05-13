@@ -8,22 +8,11 @@ if (isset($_SESSION['username'])) {
   $username = $_SESSION['username'];
   $db = new Connection();
   $link = $db->connectDatabase();
-  $query = "SELECT * FROM Games WHERE user = '".$username."'";
-
-  $result = mysqli_query($link, $query);
-
-  echo "<h2>Games You Have Created</h2>";
-  while ($row = mysqli_fetch_assoc($result)) {
-    echo
-    '<div class="yourGames">
-      <h2>'.$row["location"].': '.$row["date"].'</h2>
-    </div>';
-
-  }
 
 
 
-  echo "<h2>Games You Are Attending</h2>";
+
+  echo "<h2>Your Games</h2>";
   //$query = "SELECT * FROM UserGame";
   $query = "SELECT date, kickoff, location, g.user FROM Games g, UserGame u WHERE g.game_id = u.gameid AND u.user = '".$username."';";
   $result = mysqli_query($link, $query);
