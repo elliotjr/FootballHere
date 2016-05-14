@@ -1,0 +1,30 @@
+--ToDo--
+
+- Design Tasks
+    - Login/Register Page
+    - Logout Button
+    - Add football game
+    - Make sure website displays on tablet
+    - Style my games
+    - Issue with map being stuck to the bottom of the screen
+    - Add an about module (Make it an animated drop down like the 'your games' nav option)
+
+- Functional Tasks
+    - Remove games after their end game date
+    - Filter games by difficulty (Remove functionality to filter by day)
+    - Improve the addition of football games with one input address (Instead of separated)
+    - Form validation
+
+- Database Tasks
+    - Enforce Integrity Constraints
+    - Add/remove necessary/unecessary columns
+
+- Production Environment
+    - Troubleshoot deployment to azure
+
+- Security
+    - Prevent SQL attacks with Bind::Param
+    - Set up security on Azure (DOS attacks)
+
+- Other
+    - Comment code
