@@ -74,6 +74,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         <br>
         <br>
         <input type="submit" name="name" value="Login">
+		<a class="register" href="register.php"> Register </a>
       </form>
     </section>
   </body>

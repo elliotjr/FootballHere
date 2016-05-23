@@ -56,7 +56,11 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
          <p>Last Name</p>
          <input type="text" name="lname" value="">
          <p>Skill Level</p>
-         <input type="text" name="skill" value="">
+         <select name="skill">
+			<option value="">Beginner</option>
+			<option value="">Intermediate</option>
+			<option value="">Expert</option>
+		 </select>
          <p>Password</p>
          <input type="password" name="password" value="">
          <br>
