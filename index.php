@@ -88,20 +88,11 @@
         </div>
 
         <div id="filters">
-            <nav id="days">
-                <a href="#">Sunday</a>
-                <a href="#">Monday</a>
-                <a href="#">Tuesday</a>
-                <a href="#">Wednesday</a>
-                <a href="#">Thursday</a>
-                <a href="#">Friday</a>
-                <a href="#">Saturday</a>
-            </nav>
 
             <nav id="skillLevel">
-                <a href="#">Beginner</a>
-                <a href="#">Amateur</a>
-                <a href="#">Advanced</a>
+                <a href="#" value="1" class="skill">Beginner</a>
+                <a href="#" value="2" class="skill">Amateur</a>
+                <a href="#" value="3" class="skill">Advanced</a>
             </nav>
         </div>
 
