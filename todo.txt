@@ -8,6 +8,7 @@
     - Style my games
     - Issue with map being stuck to the bottom of the screen
     - Add an about module (Make it an animated drop down like the 'your games' nav option)
+    - Add date picker to add Football game instead of having user input the date from text
 
 - Functional Tasks
     - Remove games after their end game date
@@ -15,9 +16,6 @@
     - Improve the addition of football games with one input address (Instead of separated)
     - Form validation
 
-- Database Tasks
-    - Enforce Integrity Constraints
-    - Add/remove necessary/unecessary columns
 
 - Production Environment
     - Troubleshoot deployment to azure

@@ -16,6 +16,9 @@ $gameid = $data->result[0]->gameid;
 function checkIfAttending() {
 }
 
+/**
+*Returns true if there are any more spaces for a game. Else, return false. 
+*/
 function needsPlayers($link, $gameid) {
   $morePlayers = False;
   $query = "SELECT players_needed FROM Games WHERE game_id = ".$gameid.";";
