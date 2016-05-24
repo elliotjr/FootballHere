@@ -24,17 +24,15 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 html {
-    background: #480048;
+    background: #6b896b; 
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(left bottom, #C04848, #480048);
+    background: -webkit-linear-gradient(right bottom, #9cc39c, #284a28); 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -moz-linear-gradient(top left, #C04848, #480048);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top left, #C04848, #480048);
+    background: linear-gradient(to top left, #9cc39c, #284a28); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     position: relative;
     min-height: 100%;
-
     overflow: hidden;
 }
 
@@ -90,13 +88,13 @@ noscript p{
 
 .loginOverlay{
     margin: auto;
-    width: 20%;
+    width: 60%;
     padding: 30px;
-    background-color: #C04848;
+    background-color: #fff;
     border-radius: 20px;
     position: fixed;
     z-index: 11;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, 0%);
     visibility: hidden;
@@ -113,9 +111,8 @@ noscript p{
 .loginOverlay h1{
     text-align: center;
     font-size: 2.4em;
-    color: white;
-    width: 300px;
-    margin-bottom: 20px;
+    color: black;
+    width: 100%;
 
     cursor: default;
     -webkit-touch-callout: none; /* iOS Safari */
@@ -130,15 +127,47 @@ noscript p{
     font-size: 1.4em;
 }
 
+.formGroup{
+    position: relative;
+    margin-bottom: 35px;
+}
+
 .loginOverlay input{
     width: 100%;
     font-size: 1em;
-    margin-bottom: 20px;
+    display: block;
+    border: none;
+    border-bottom: solid 2px #757575;
 }
 
-.loginOverlay form p{
-    margin-bottom: 5px;
-    color: white;
+.loginOverlay input:focus{
+    outline: none;
+}
+
+.loginOverlay label{
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:5px;
+    transition:0.2s ease all;
+}
+
+.loginOverlay input:focus ~ label, input:valid ~label{
+    top:-20px;
+    font-size:14px;
+    color: black;
+}
+
+select{
+    background-color: transparent;
+    width: 100%;
+    font-size: 18px;
+    font-family: inherit;
+/*    border: none;*/
+    border-bottom: solid 1px #757575;
 }
 
 .noAccount{
@@ -316,29 +345,26 @@ form p {
   color: #FFFFFF;
 }
 
-.logoutButton {
-	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	box-shadow:inset 0px 39px 0px -24px #e67a73;
-	background-color:#e4685d;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:14px;
-	padding:8px 28px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+#adminArea{
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    width: 280px;
+    margin-left: 70%;
+    margin-top: -70px;
+    height: 80px;
+    border-radius: 15px;
 }
-.logoutButton:hover {
-	background-color:#eb675e;
+
+#adminArea p{
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    color: white;
 }
-.logoutButton:active {
-	position:relative;
-	top:1px;
+
+.logoutButton{
+    float: right;
 }
 
 .register {
