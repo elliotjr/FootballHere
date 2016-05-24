@@ -82,14 +82,14 @@
                         <label>Players Needed</label>
                     </div>
 
-
-
                     <select name="skill">
                         <option selected="true" disabled>Select Skill Level</option>
                         <option value="1">Beginner</option>
                         <option value="2">Amateur</option>
                         <option value="3">Advanced</option>
                     </select>
+                    
+                    
                     <input class="save" type="button" value="Submit" />
                 </form>
 

@@ -169,7 +169,7 @@ noscript p{
     transition:0.2s ease all;
 }
 
-#inputForm input:focus ~ label, input:valid ~label{
+#inputForm input:focus ~ label, #inputForm input:valid ~ label{
     top:-20px;
     font-size:14px;
     color: black;

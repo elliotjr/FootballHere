@@ -56,37 +56,58 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
         </noscript>
 
 
-        <div class="loginWrap">
-            <h1>Register</h1>
-            <form id="inputForm" id="register" action="register.php" method="post">
-                <p>Email</p>
-                <input type="text" id="r_email" name="email" value="">
-                <span class="error">This field is required</span>
-                <p>Username</p>
-                <input type="text" id="r_username" name="username" value="">
-                <span class="error">This field is required</span>
-                <p>Age</p>
-                <input type="text" id="r_age" name="age" value="">
-                <span class="error">This field is required</span>
-                <p>First Name</p>
-                <input type="text" id="r_fname" name="fname" value="">
-                <span class="error">This field is required</span>
-                <p>Last Name</p>
-                <input type="text" id="r_lname" name="lname" value="">
-                <span class="error">This field is required</span>
-                <p>Skill Level</p>
-                <select name="skill">
-                    <option value="1">Beginner</option>
-                    <option value="2">Intermediate</option>
-                    <option value="3">Expert</option>
-                </select>
-                <p>Password</p>
-                <input type="password" id="r_password" name="password" value="">
-                <span class="error">This field is required</span>
-                <br>
-                <br>
-                <input type="submit" id="r_submit" name="name" value="Register">
-            </form>
+        <div class="loginOverlay visible">
+            <div id="inputForm">
+                <form id="" id="register" action="register.php" method="post">
+                    <h1>Register</h1>
+
+                    <div class="formGroup">
+                        <input type="text" id="r_email" name="email" required>
+                        <label>Email</label>
+                        <span class="error">This field is required</span>
+                    </div>
+
+                    <div class="formGroup">
+                        <input type="text" id="r_username" name="username" required>
+                        <label>Username</label>
+                        <span class="error">This field is required</span>
+                    </div>
+                    
+                    <div class="formGroup">
+                        <input type="text" id="r_password" name="password" required>
+                        <label>Password</label>
+                        <span class="error">This field is required</span>
+                    </div>
+
+                    <div class="formGroup">
+                        <input type="text" id="r_fname" name="fname" required>
+                        <label>First Name</label>
+                        <span class="error">This field is required</span>
+                    </div>
+                    
+                     <div class="formGroup">
+                        <input type="text" id="r_lname" name="lname" required>
+                        <label>Last Name</label>
+                        <span class="error">This field is required</span>
+                    </div>
+                    
+                    <div class="formGroup">
+                        <input type="text" id="r_age" name="age" required>
+                        <label>Age</label>
+                        <span class="error">This field is required</span>
+                    </div>
+                    
+                    <select name="skill">
+                        <option selected="true" disabled>Select Skill Level</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Amateur</option>
+                        <option value="3">Advanced</option>
+                    </select>
+                    <br>
+                    <br>
+                    <input type="submit" id="r_submit" name="name" value="Register">
+                </form>
+            </div>
         </div>
 
 
