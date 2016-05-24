@@ -53,29 +53,51 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="./main.css">
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header>
-      <h1>Login</h1>
-    </header>
+    <!DOCTYPE html>
+    <html>
 
-    <section class="loginWrap">
-      <form class="loginForm" action="login.php" method="post">
-        <p>Username</p>
-        <input type="text" name="username" value="">
-        <p>Password</p>
-        <input type="password" name="password" value="">
-        <br>
-        <br>
-        <input type="submit" name="name" value="Login">
-		<a class="register" href="register.php"> Register </a>
-      </form>
-    </section>
-  </body>
-</html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+
+    <body>
+        <header>
+            <h1>football</h1>
+            <h1 class="bold">here</h1>
+        </header>
+
+        <noscript>
+            <h1>Oops!</h1>
+            <h2>This site needs JavaScript to work properly!</h2>
+            <p>Try turning JavaScript on, or use a different browser.</p>
+        </noscript>
+
+        <section class="loginOverlay visible">
+            <div id="inputForm">
+                <form class="loginForm" action="login.php" method="post">
+                   
+                   <h1>Login</h1>
+                    
+                    <div class="formGroup">
+                        <input type="text" name="username" required>
+                        <label>Username</label>
+                        <span class="error">This field is required</span>
+                    </div>
+                    
+                    <div class="formGroup">
+                        <input type="text" name="password" required>
+                        <label>Password</label>
+                        <span class="error">This field is required</span>
+                    </div>
+                    <input type="submit" name="name" value="Login">
+                    <br>
+                    <p>Don't have an account?</p>
+                    <a class="register" href="register.php">Register</a>
+                </form>
+            </div>
+        </section>
+    </body>
+
+    </html>

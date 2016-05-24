@@ -90,7 +90,7 @@
                     </select>
                     
                     
-                    <input class="save" type="button" value="Submit" />
+                    <input class="save" type="submit" value="Submit" />
                 </form>
 
             </div>
@@ -103,13 +103,12 @@
 
         <main>
             <div id="toolbar">
-                <a id="loginButton" href="#">Add a Football Game</a>
-                <a class="filterButton whiteFilterButton" href="#">Filter Results</a>
-                <a class="games" href="#">Your Games</a>
+                <a id="addGameButton" href="#">Add a Football Game</a>
+                <a class="filterButton white" href="#">Filter Results</a>
+                <a class="gamesButton white" href="#">Your Games</a>
             </div>
 
             <div id="filters">
-
                 <nav id="skillLevel">
                     <a href="#" value="1" class="skill">Beginner</a>
                     <a href="#" value="2" class="skill">Amateur</a>

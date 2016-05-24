@@ -49,12 +49,6 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
             <h1 class="bold">here</h1>
         </header>
 
-        <noscript>
-            <h1>Oops!</h1>
-            <h2>This site needs JavaScript to work properly!</h2>
-            <p>Try turning JavaScript on, or use a different browser.</p>
-        </noscript>
-
 
         <div class="loginOverlay visible">
             <div id="inputForm">

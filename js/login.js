@@ -1,6 +1,6 @@
 // Displays and removes the login overlay
 $(document).ready(function () {
-    $("#loginButton").click(function () {
+    $("#addGameButton").click(function () {
         $(".darkOverlay").toggleClass('visible');
         $(".loginOverlay").toggleClass('visible');
     });

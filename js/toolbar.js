@@ -1,12 +1,15 @@
-$("#toolbar").css({'visibility': 'visible'});
+$("#toolbar").css({
+    'visibility': 'visible'
+});
 
 $('#yourGames').hide();
 
 $(".filterButton").click(function () {
-        $("#filters").slideToggle();
-        $(this).toggleClass("whiteFilterButton");
-      });
+    $("#filters").slideToggle();
+    $(this).toggleClass("white");
+});
 
-$(".games").click(function(){
-  $("#yourGames").slideToggle();
+$(".gamesButton").click(function () {
+    $("#yourGames").slideToggle();
+    $(this).toggleClass("white");
 });
