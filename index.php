@@ -36,7 +36,7 @@
         <div class="darkOverlay"></div>
 
         <div class="loginOverlay">
-            <div id="loginForm">
+            <div id="inputForm">
                 <h1>Add a Game</h1>
                 <form class="addGame" action="addGameToDb.php" method="post">
 
@@ -93,24 +93,6 @@
                     <input class="save" type="button" value="Submit" />
                 </form>
 
-            </div>
-
-            <div id="signupForm">
-                <h1>Sign Up</h1>
-                <form action="signup.php" method="post">
-                    <p>Email</p>
-                    <input type="text" />
-
-                    <p>Password</p>
-                    <input type="password" />
-
-                    <input type="submit" value="Submit" />
-                </form>
-
-                <div class="noAccount">
-                    <p>Already have an account?</p>
-                    <a id="goToLogin" href="#">Log In</a>
-                </div>
             </div>
         </div>
 

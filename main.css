@@ -86,6 +86,20 @@ noscript p{
     visibility: hidden;
 }
 
+.loginWrap h1{
+    text-align: center;
+    font-size: 2.4em;
+    color: black;
+    width: 100%;
+
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+}
+
 .loginOverlay{
     margin: auto;
     width: 60%;
@@ -108,7 +122,7 @@ noscript p{
     visibility: visible;
 }
 
-.loginOverlay h1{
+#inputForm h1{
     text-align: center;
     font-size: 2.4em;
     color: black;
@@ -122,7 +136,7 @@ noscript p{
     -ms-user-select: none;       /* IE/Edge */
 }
 
-.loginOverlay form{
+#inputForm form{
     padding: 20px;
     font-size: 1.4em;
 }
@@ -132,7 +146,7 @@ noscript p{
     margin-bottom: 35px;
 }
 
-.loginOverlay input{
+#inputForm input{
     width: 100%;
     font-size: 1em;
     display: block;
@@ -140,11 +154,11 @@ noscript p{
     border-bottom: solid 2px #757575;
 }
 
-.loginOverlay input:focus{
+#inputForm input:focus{
     outline: none;
 }
 
-.loginOverlay label{
+#inputForm label{
     color:#999; 
     font-size:18px;
     font-weight:normal;
@@ -155,7 +169,7 @@ noscript p{
     transition:0.2s ease all;
 }
 
-.loginOverlay input:focus ~ label, input:valid ~label{
+#inputForm input:focus ~ label, input:valid ~label{
     top:-20px;
     font-size:14px;
     color: black;
@@ -182,10 +196,6 @@ select{
     width: 100%;
     color: #fdda45;
     text-decoration: none;
-}
-
-#signupForm{
-    display: none;
 }
 
 header {
@@ -306,7 +316,7 @@ footer a:hover {
   border-radius: 25px;
   margin: auto;
   margin-top: 50px;
-  width: 25%;
+  width: 60%;
 }
 
 

@@ -32,51 +32,64 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
 }
  ?>
 
- <!DOCTYPE html>
- <html>
-   <head>
-     <link rel="stylesheet" type="text/css" href="./main.css">
-	 <script src="js/jquery-1.12.2.min.js"></script>
-     <script src="js/formval.js"></script>
-	 <meta charset="utf-8">
-     <title>Register</title>
-   </head>
-   <header>
-     <h1>Register</h1>
-   </header>
-   <body>
-     <div class="loginWrap">
-       <form class="" id="register" action="register.php" method="post">
-         <p>Email</p>
-         <input type="text" id="r_email" name="email" value="">
-		 <span class="error">This field is required</span>
-         <p>Username</p>
-         <input type="text" id="r_username" name="username" value="">
-		 <span class="error">This field is required</span>
-         <p>Age</p>
-         <input type="text" id="r_age" name="age" value="">
-		 <span class="error">This field is required</span>
-         <p>First Name</p>
-         <input type="text" id="r_fname" name="fname" value="">
-		 <span class="error">This field is required</span>
-         <p>Last Name</p>
-         <input type="text" id="r_lname" name="lname" value="">
-		 <span class="error">This field is required</span>
-         <p>Skill Level</p>
-         <select name="skill">
-			<option value="1">Beginner</option>
-			<option value="2">Intermediate</option>
-			<option value="3">Expert</option>
-		 </select>
-         <p>Password</p>
-         <input type="password" id="r_password" name="password" value="">
-		 <span class="error">This field is required</span>
-         <br>
-         <br>
-         <input type="submit" id="r_submit" name="name" value="Register">
-       </form>
-     </div>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+        <script src="js/jquery-1.12.2.min.js"></script>
+        <script src="js/formval.js"></script>
+        <meta charset="utf-8">
+        <title>Register</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>football</h1>
+            <h1 class="bold">here</h1>
+        </header>
+
+        <noscript>
+            <h1>Oops!</h1>
+            <h2>This site needs JavaScript to work properly!</h2>
+            <p>Try turning JavaScript on, or use a different browser.</p>
+        </noscript>
 
 
-   </body>
- </html>
+        <div class="loginWrap">
+            <h1>Register</h1>
+            <form id="inputForm" id="register" action="register.php" method="post">
+                <p>Email</p>
+                <input type="text" id="r_email" name="email" value="">
+                <span class="error">This field is required</span>
+                <p>Username</p>
+                <input type="text" id="r_username" name="username" value="">
+                <span class="error">This field is required</span>
+                <p>Age</p>
+                <input type="text" id="r_age" name="age" value="">
+                <span class="error">This field is required</span>
+                <p>First Name</p>
+                <input type="text" id="r_fname" name="fname" value="">
+                <span class="error">This field is required</span>
+                <p>Last Name</p>
+                <input type="text" id="r_lname" name="lname" value="">
+                <span class="error">This field is required</span>
+                <p>Skill Level</p>
+                <select name="skill">
+                    <option value="1">Beginner</option>
+                    <option value="2">Intermediate</option>
+                    <option value="3">Expert</option>
+                </select>
+                <p>Password</p>
+                <input type="password" id="r_password" name="password" value="">
+                <span class="error">This field is required</span>
+                <br>
+                <br>
+                <input type="submit" id="r_submit" name="name" value="Register">
+            </form>
+        </div>
+
+
+    </body>
+
+    </html>

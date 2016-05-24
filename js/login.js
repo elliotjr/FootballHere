@@ -26,23 +26,3 @@ $(document).keyup(function (e) {
     }
     
 });
-
-
-// Change Log In pane to Sign Up pane
-$(document).ready(function(){
-    $('#goToSignup').click(function(){
-        $('#loginForm').css({'display' : 'none'});
-        $('#signupForm').css({'display' : 'block'});
-        $('.loginOverlay').css({'background-color' : '#6d006d'});
-    });
-    
-    $('#goToLogin').click(function(){
-        returnToLoginPane();
-    });
-})
-
-function returnToLoginPane(){
-    $('#signupForm').css({'display' : 'none'});
-    $('#loginForm').css({'display' : 'block'});
-    $('.loginOverlay').css({'background-color' : '#C04848'});
-};
