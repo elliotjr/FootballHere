@@ -38,7 +38,7 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
     <head>
         <link rel="stylesheet" type="text/css" href="./main.css">
         <script src="js/jquery-1.12.2.min.js"></script>
-        <script src="js/formval.js"></script>
+       <!-- <script src="js/formval.js"></script> -->
         <meta charset="utf-8">
         <title>Register</title>
     </head>
@@ -91,8 +91,8 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
                         <span class="error">This field is required</span>
                     </div>
                     
-                    <select name="skill">
-                        <option selected="true" disabled>Select Skill Level</option>
+                    <select name="skill" required>
+                        <option value="">Select Skill Level</option>
                         <option value="1">Beginner</option>
                         <option value="2">Amateur</option>
                         <option value="3">Advanced</option>
