@@ -4,13 +4,14 @@
   *MySQL connection class to connect to database
   */
   class Connection {
+    //Database=FootballHere;Data Source=au-cdbr-azure-southeast-a.cloudapp.net;User Id=bc04356776dda3;Password=9168bb31
 
     //Host name
-    var $host = "localhost";
+    var $host = "au-cdbr-azure-southeast-a.cloudapp.net";
     //Username
-    var $username = "root";
+    var $username = "bc04356776dda3";
     //Password
-    var $password = "";
+    var $password = "9168bb31";
     //Database name
     var $databaseName = "FootballHere";
     //MYSQLI connection instance
