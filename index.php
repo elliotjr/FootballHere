@@ -83,7 +83,7 @@
                     </div>
 
                     <select name="skill" required>
-                        <option selected="true" disabled>Select Skill Level</option>
+                        <option value="">Select Skill Level</option>
                         <option value="1">Beginner</option>
                         <option value="2">Amateur</option>
                         <option value="3">Advanced</option>
