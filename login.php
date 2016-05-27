@@ -59,7 +59,8 @@ if (isset($_POST['username']) && isset($_POST['password'])){
     <head>
         <link rel="stylesheet" type="text/css" href="./main.css">
         <meta charset="utf-8">
-        <title></title>
+        <title>Login | footballhere</title>
+        <link rel="icon" type="image/png" href="./fh_favicon.png">
     </head>
 
     <body>

@@ -40,7 +40,8 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
         <script src="js/jquery-1.12.2.min.js"></script>
        <!-- <script src="js/formval.js"></script> -->
         <meta charset="utf-8">
-        <title>Register</title>
+        <title>Register | footballhere</title>
+        <link rel="icon" type="image/png" href="./fh_favicon.png">
     </head>
 
     <body>

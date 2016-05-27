@@ -4,9 +4,10 @@
 
 <head>
     <meta charset='utf-8' />
-    <title>football here</title>
+    <title>footballhere</title>
     <link rel="stylesheet" type="text/css" href="./main.css">
     <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+    <link rel="icon" type="image/png" href="./fh_favicon.png">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
         </noscript>
 
         <div id="adminArea">
-            <p>Welcome Username</p>
+            <p>Welcome *username*</p>
             <form class="logoutForm" action="logout.php" method="post">
                 <input class="logoutButton" type="submit" name="logout" value="Logout">
             </form>
