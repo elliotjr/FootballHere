@@ -13,3 +13,8 @@ $(".gamesButton").click(function () {
     $("#yourGames").slideToggle();
     $(this).toggleClass("white");
 });
+
+//Filter Results
+$(".skill").click(function () {
+    $(this).toggleClass("white");
+});

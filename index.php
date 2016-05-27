@@ -111,9 +111,9 @@
 
             <div id="filters">
                 <nav id="skillLevel">
-                    <a href="#" value="1" class="skill">Beginner</a>
-                    <a href="#" value="2" class="skill">Amateur</a>
-                    <a href="#" value="3" class="skill">Advanced</a>
+                    <a href="#" value="1" class="skill white">Beginner</a>
+                    <a href="#" value="2" class="skill white">Amateur</a>
+                    <a href="#" value="3" class="skill white">Advanced</a>
                 </nav>
             </div>
 
