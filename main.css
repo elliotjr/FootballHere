@@ -24,13 +24,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 html {
-    background: #6b896b; 
+    background: #6b896b;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(right bottom, #9cc39c, #284a28); 
+    background: -webkit-linear-gradient(right bottom, #9cc39c, #284a28);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top left, #9cc39c, #284a28); 
+    background: linear-gradient(to top left, #9cc39c, #284a28);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
     position: relative;
     min-height: 100%;
     overflow: hidden;
@@ -41,7 +40,7 @@ body {
     font-family: mosk, sans-serif;
 }
 
-noscript{
+noscript {
     position: fixed;
     z-index: 100;
     min-height: 300px;
@@ -51,30 +50,29 @@ noscript{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     border-radius: 40px;
     padding: 40px;
     color: white;
     text-align: center;
 }
 
-noscript h1{
+noscript h1 {
     font-size: 4em;
     margin-bottom: 40px;
 }
 
-noscript h2{
+noscript h2 {
     font-size: 2em;
     line-height: 1.2em;
     margin-bottom: 20px;
 }
 
-noscript p{
+noscript p {
     font-size: 1.4em;
     line-height: 1.4em;
 }
 
-.darkOverlay{
+.darkOverlay {
     background-color: #2a2a2a;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -86,21 +84,25 @@ noscript p{
     visibility: hidden;
 }
 
-.loginWrap h1{
+.loginWrap h1 {
     text-align: center;
     font-size: 2.4em;
     color: black;
     width: 100%;
-
     cursor: default;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* IE/Edge */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
 }
 
-.loginOverlay{
+.loginOverlay {
     margin: auto;
     width: 600px;
     padding: 30px;
@@ -112,42 +114,45 @@ noscript p{
     left: 50%;
     transform: translate(-50%, 0%);
     visibility: hidden;
-
-    -webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
 }
 
-.visible{
+.visible {
     visibility: visible;
 }
 
-#inputForm h1{
+#inputForm h1 {
     text-align: center;
     font-size: 2.4em;
     color: black;
     width: 100%;
     margin-bottom: 40px;
-
     cursor: default;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* IE/Edge */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
 }
 
-#inputForm form{
+#inputForm form {
     padding: 20px;
     font-size: 1.4em;
 }
 
-.formGroup{
+.formGroup {
     position: relative;
     margin-bottom: 35px;
 }
 
-#inputForm input{
+#inputForm input {
     width: 100%;
     font-size: 1em;
     display: block;
@@ -156,37 +161,38 @@ noscript p{
     margin-top: 10px;
 }
 
-#inputForm input:focus{
+#inputForm input:focus {
     outline: none;
 }
 
-#inputForm label{
-    color:#999; 
-    font-size:18px;
-    font-weight:normal;
-    position:absolute;
-    pointer-events:none;
-    left:5px;
-    top:5px;
-    transition:0.2s ease all;
+#inputForm label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 5px;
+    transition: 0.2s ease all;
 }
 
-#inputForm input:focus ~ label, #inputForm input:valid ~ label{
-    top:-20px;
-    font-size:14px;
+#inputForm input:focus ~ label,
+#inputForm input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
     color: black;
 }
 
-select{
+select {
     background-color: transparent;
     width: 100%;
     font-size: 18px;
     font-family: inherit;
-/*    border: none;*/
+    /*    border: none;*/
     border-bottom: solid 1px #757575;
 }
 
-#inputForm input[type=submit]{
+#inputForm input[type=submit] {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -198,54 +204,43 @@ select{
     background-color: transparent;
 }
 
-#inputForm input[type=submit]:hover{
+#inputForm input[type=submit]:hover {
     font-weight: 700;
 }
 
-#inputForm p,a{
+#inputForm p,
+a {
     text-align: center;
     font-size: 0.8em;
-    padding: 5px;;
+    padding: 5px;
+    ;
 }
 
-#inputForm a{
+#inputForm a {
     display: block;
     text-decoration: none;
     color: #6b896b;
 }
 
-.register:hover{
+.register:hover {
     font-weight: 700;
 }
-
-/*
-SHOULD BE OKAY TO DELETE.
-.noAccount{
-    text-align: center;
-    color: white;
-    line-height: 1.2em;
-}
-
-.noAccount a{
-    display: block;
-    text-align: center;
-    width: 100%;
-    color: #fdda45;
-    text-decoration: none;
-}
-*/
-
 
 header {
     margin: 0 auto;
     text-align: center;
     margin-top: 40px;
     cursor: default;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* IE/Edge */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
 }
 
 header h1 {
@@ -255,7 +250,7 @@ header h1 {
     font-weight: 100;
 }
 
-.bold{
+.bold {
     font-weight: 700;
 }
 
@@ -290,12 +285,9 @@ footer a:hover {
     display: none;
     background-color: #2a2a2a;
     background-color: rgba(46, 46, 46, 0.4);
-    -moz-box-shadow:    inset  0  10px 10px -10px #000,
-                        inset  0  -5px 10px -10px #000;
-    -webkit-box-shadow: inset  0  10px 10px -10px #000,
-                        inset  0  -5px 10px -10px #000;
-     box-shadow:        inset  0  10px 10px -10px #000,
-                        inset  0  -5px 10px -10px #000;
+    -moz-box-shadow: inset 0 10px 10px -10px #000, inset 0 -5px 10px -10px #000;
+    -webkit-box-shadow: inset 0 10px 10px -10px #000, inset 0 -5px 10px -10px #000;
+    box-shadow: inset 0 10px 10px -10px #000, inset 0 -5px 10px -10px #000;
 }
 
 #filters nav {
@@ -309,38 +301,38 @@ footer a:hover {
     text-decoration: none;
 }
 
-#toolbar{
+#toolbar {
     text-align: center;
     visibility: hidden;
 }
 
-#toolbar *{
+#toolbar * {
     display: inline-block;
 }
 
-#toolbar a{
+#toolbar a {
     font-size: 1.2em;
     text-decoration: none;
     padding: 10px 30px;
 }
 
-#addGameButton{
+#addGameButton {
     color: #fdda45;
 }
 
-.filterButton{
+.filterButton {
     color: #fdda45;
 }
 
-.gamesButton{
-  color: #fdda45;
-}
-
-.skill{
+.gamesButton {
     color: #fdda45;
 }
 
-.white{
+.skill {
+    color: #fdda45;
+}
+
+.white {
     color: white;
 }
 
@@ -352,12 +344,12 @@ footer a:hover {
     margin-top: 10px;
 }
 
-.loginWrap{
-  background: #FFFFFF;
-  border-radius: 25px;
-  margin: auto;
-  margin-top: 50px;
-  width: 60%;
+.loginWrap {
+    background: #FFFFFF;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
 }
 
 #yourGames {
@@ -366,26 +358,28 @@ footer a:hover {
     display: none;
     background-color: #2a2a2a;
     background-color: rgba(46, 46, 46, 0.4);
-    -moz-box-shadow:    inset  0  10px 10px -10px #000,
-                        inset  0  -5px 10px -10px #000;
-    -webkit-box-shadow: inset  0  10px 10px -10px #000,
-                        inset  0  -5px 10px -10px #000;
-     box-shadow:        inset  0  10px 10px -10px #000,
-                        inset  0  -5px 10px -10px #000;
+    -moz-box-shadow: inset 0 10px 10px -10px #000, inset 0 -5px 10px -10px #000;
+    -webkit-box-shadow: inset 0 10px 10px -10px #000, inset 0 -5px 10px -10px #000;
+    box-shadow: inset 0 10px 10px -10px #000, inset 0 -5px 10px -10px #000;
 }
 
-.yourGames {
-  width: 20%;
-  padding-bottom: 10px;
-  margin: 20px;
-  border-bottom: 1px solid #FFFFFF;
-  color: #FFFFFF;
+#yourGames * {
+    margin: 0 auto;
+    width: 80%;
 }
 
-#adminArea{
+.gamesList p {
+    line-height: 1.2em;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    margin: 20px;
+    color: #fff;
+}
+
+#adminArea {
     position: fixed;
     z-index: 10;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 280px;
     margin-left: 70%;
     margin-top: -70px;
@@ -393,31 +387,31 @@ footer a:hover {
     border-radius: 15px;
 }
 
-#adminArea p{
+#adminArea p {
     position: absolute;
     bottom: 12px;
     left: 10px;
     color: white;
 }
 
-.logoutButton{
+.logoutButton {
     float: right;
 }
 
-input.invalid{
+input.invalid {
     border: 2px solid red;
 }
- 
-input.valid{
+
+input.valid {
     border: 2px solid green;
 }
 
-.error{
+.error {
     display: none;
     margin-left: 10px;
-}      
- 
-.error_show{
+}
+
+.error_show {
     color: red;
     margin-left: 10px;
 }

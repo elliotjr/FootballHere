@@ -88,7 +88,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
                     </div>
                     
                     <div class="formGroup">
-                        <input type="text" name="password" required>
+                        <input type="password" name="password" required>
                         <label>Password</label>
                         <span class="error">This field is required</span>
                     </div>

@@ -69,7 +69,7 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
                     </div>
                     
                     <div class="formGroup">
-                        <input type="text" id="r_password" name="password" required>
+                        <input type="password" id="r_password" name="password" required>
                         <label>Password</label>
                         <span class="error">This field is required</span>
                     </div>
