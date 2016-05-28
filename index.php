@@ -15,8 +15,7 @@
     <?php
     session_start();
     if (!isset($_SESSION['username'])) {
-        //The website shouldn't need a login immediately.
-//      header('location: login.php');
+      header('location: login.php');
     }
    ?>
 
@@ -28,7 +27,7 @@
         </noscript>
 
         <div id="adminArea">
-            <p>Welcome *username*</p>
+            <p>Welcome <?php echo $_SESSION['username'] ?></p>
             <form class="logoutForm" action="logout.php" method="post">
                 <input class="logoutButton" type="submit" name="logout" value="Logout">
             </form>
@@ -89,8 +88,8 @@
                         <option value="2">Amateur</option>
                         <option value="3">Advanced</option>
                     </select>
-                    
-                    
+
+
                     <input class="save" type="submit" value="Submit" />
                 </form>
 
