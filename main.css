@@ -390,12 +390,14 @@ footer a:hover {
 #adminArea p {
     position: absolute;
     bottom: 12px;
-    left: 10px;
+    left: 20px;
     color: white;
 }
 
 .logoutButton {
-    float: right;
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
 }
 
 input.invalid {
