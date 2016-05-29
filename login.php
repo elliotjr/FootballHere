@@ -84,13 +84,11 @@ if (isset($_POST['username']) && isset($_POST['password'])){
                     <div class="formGroup">
                         <input type="text" name="username" required>
                         <label>Username</label>
-                        <span class="error">This field is required</span>
                     </div>
                     
                     <div class="formGroup">
                         <input type="password" name="password" required>
                         <label>Password</label>
-                        <span class="error">This field is required</span>
                     </div>
                     <input type="submit" name="name" value="Login">
                     <br>

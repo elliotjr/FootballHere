@@ -38,8 +38,6 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
     <head>
         <link rel="stylesheet" type="text/css" href="./main.css">
         <script src="js/jquery-1.12.2.min.js"></script>
-		<script type="text/javascript" src="./js/jquery.validate.js"></script>
-		<script type="text/javascript" src="./js/register.js"></script>
         <meta charset="utf-8">
         <title>Register | footballhere</title>
         <link rel="icon" type="image/png" href="./fh_favicon.png">
@@ -83,11 +81,11 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
                     </div>
 					
 					<div class="formGroup">
-                        <input type="password" id="confirm_password" name="confirm_password" required>
-                        <label>Confirm Password</label>
+                        <input type="number" id="age" name="age" required>
+                        <label>Age</label>
                     </div>
-					
-					<select id="skill" name="skill">
+
+					<select id="skill" name="skill" required>
                         <option value="">Select Skill Level</option>
                         <option value="1">Beginner</option>
                         <option value="2">Amateur</option>
@@ -96,7 +94,7 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
 
                     <br>
                     <br>
-                    <input type="submit" class="submit" name="name" value="Register">
+                    <input type="submit" id="submit" name="name" value="Register">
                 </form>
             </div>
         </div>
