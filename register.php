@@ -58,39 +58,32 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
                     <h1>Register</h1>
 					
 					<div class="formGroup">
-                        <input type="text" id="fname" name="fname">
+                        <input type="text" id="fname" name="fname" required>
                         <label>First Name</label>
-                         
                     </div>
                     
                      <div class="formGroup">
-                        <input type="text" id="lname" name="lname">
+                        <input type="text" id="lname" name="lname" required>
                         <label>Last Name</label>
-                         
                     </div>
 					
                     <div class="formGroup">
-                        <input type="text" id="username" name="username">
+                        <input type="text" id="username" name="username" required>
                         <label>Username</label>
                     </div>
 					
                     <div class="formGroup">
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                         <label>Email</label>
-                    </div>
-                    
-					<div class="formGroup">
-                        <input type="text" id="age" name="age">
-                        <label>Age</label>
                     </div>
 					
                     <div class="formGroup">
-                        <input type="password" id="password" name="password" >
+                        <input type="password" id="password" name="password" required>
                         <label>Password</label>
                     </div>
 					
 					<div class="formGroup">
-                        <input type="password" id="confirm_password" name="confirm_password">
+                        <input type="password" id="confirm_password" name="confirm_password" required>
                         <label>Confirm Password</label>
                     </div>
 					
