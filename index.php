@@ -121,6 +121,15 @@
             </div>
 
             <div id="map"></div>
+            <div class="filteredEasy">
+              <?php include('filterBySkill.php'); getGameBySkill(1);?>
+            </div>
+            <div class="filteredMedium">
+              <?php getGameBySkill(2);?>
+            </div>
+            <div class="filteredHard">
+              <?php getGameBySkill(3);?>
+            </div>
         </main>
 
 

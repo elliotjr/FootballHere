@@ -2,9 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-include('connection.php');
-include('joinGame.php');
-
+//include('connection.php');
 
 /**
 *Prints a list of games that satisify the skill requirement (Easy: 1, Amateure: 2, Hard: 3)
