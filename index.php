@@ -90,7 +90,7 @@
                     </select>
 
 
-                    <input class="save" type="submit" value="Submit" />
+                    <input class="save" type="button" value="Submit" />
                 </form>
 
             </div>
