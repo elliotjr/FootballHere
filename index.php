@@ -110,9 +110,9 @@
 
             <div id="filters">
                 <nav id="skillLevel">
-                    <a href="#" value="1" class="skill white">Beginner</a>
-                    <a href="#" value="2" class="skill white">Amateur</a>
-                    <a href="#" value="3" class="skill white">Advanced</a>
+                    <a id="beginnerSkill"href="#" value="1" class="skill white">Beginner</a>
+                    <a id="amateurSkill"href="#" value="2" class="skill white">Amateur</a>
+                    <a id="advancedSkill"href="#" value="3" class="skill white">Advanced</a>
                 </nav>
             </div>
 
@@ -129,6 +129,7 @@
         <script type="text/javascript" src="./js/login.js"></script>
         <script type="text/javascript" src="./js/toolbar.js"></script>
         <script type="text/javascript" src="ajax.js"></script>
+        <script type="text/javascript" src="./js/filterBySkill.js"></script>
 
 
 </body>

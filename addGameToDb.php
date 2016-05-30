@@ -32,4 +32,5 @@ if(isset($_REQUEST)) {
   echo mysqli_error($link);
   $db->closeConnection();
   }
+  header("location: index.php");
 ?>

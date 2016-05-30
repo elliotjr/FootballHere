@@ -5,9 +5,7 @@ $(document).on('click','.save',function(e) {
           type: "GET",
           url:  "addGameToDb.php",
           success: function(data){
-               $('.loginOverlay').hide();
-               $('.darkOverlay').hide();
-               alert(data);
+               alert("Your Game was Added Successfully");
           }
     });
 });
