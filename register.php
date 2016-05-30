@@ -36,11 +36,13 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
     <html>
 
     <head>
-        <link rel="stylesheet" type="text/css" href="./main.css">
-        <script src="js/jquery-1.12.2.min.js"></script>
-        <meta charset="utf-8">
-        <title>Register | footballhere</title>
-        <link rel="icon" type="image/png" href="./fh_favicon.png">
+      <meta name="description" content="Football Here Brisbane: Register">
+      <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+      <link rel="stylesheet" type="text/css" href="./main.css">
+      <script src="js/jquery-1.12.2.min.js"></script>
+      <meta charset="utf-8">
+      <title>Register | footballhere</title>
+      <link rel="icon" type="image/png" href="./fh_favicon.png">
     </head>
 
     <body>
@@ -54,32 +56,32 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
             <div id="inputForm">
                 <form id="" id="register" action="register.php" method="post" autocomplete="off">
                     <h1>Register</h1>
-					
+
 					<div class="formGroup">
                         <input type="text" id="fname" name="fname" required>
                         <label>First Name</label>
                     </div>
-                    
+
                      <div class="formGroup">
                         <input type="text" id="lname" name="lname" required>
                         <label>Last Name</label>
                     </div>
-					
+
                     <div class="formGroup">
                         <input type="text" id="username" name="username" required>
                         <label>Username</label>
                     </div>
-					
+
                     <div class="formGroup">
                         <input type="email" id="email" name="email" required>
                         <label>Email</label>
                     </div>
-					
+
                     <div class="formGroup">
                         <input type="password" id="password" name="password" required>
                         <label>Password</label>
                     </div>
-					
+
 					<div class="formGroup">
                         <input type="number" id="age" name="age" required>
                         <label>Age</label>
