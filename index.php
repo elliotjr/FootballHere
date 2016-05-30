@@ -26,6 +26,16 @@
             <p>Try turning JavaScript on, or use a different browser.</p>
         </noscript>
 
+        <div class="infoButton">
+            <h1>&#63;</h1>
+        </div>
+        <div class="infoPane hidden">
+            <h1>About footballhere</h1>
+            <h2>&#9917;</h2>
+            <p>footballhere is a platform that connects people with like-minded people who want to play a game of social football. Simply find a game happening near you and show up!</p>
+            <p>You can also enter your own game onto the map, to attract new players and make new friends!</p>
+        </div>
+
         <div id="adminArea">
             <p>Welcome
                 <?php echo $_SESSION['username'] ?>
@@ -123,18 +133,18 @@
             </div>
 
             <div id="map"></div>
-            
+
             <div id="filteredResults" class="hidden">
                 <div class="filteredBeginner">
-                   <h1>Beginner</h1>
+                    <h1>Beginner</h1>
                     <?php include('filterBySkill.php'); getGameBySkill(1);?>
                 </div>
                 <div class="filteredAmateur">
-                   <h1>Amateur</h1>
+                    <h1>Amateur</h1>
                     <?php getGameBySkill(2);?>
                 </div>
                 <div class="filteredAdvanced">
-                   <h1>Advanced</h1>
+                    <h1>Advanced</h1>
                     <?php getGameBySkill(3);?>
                 </div>
             </div>
@@ -146,7 +156,7 @@
         <script type="text/javascript" src="./js/login.js"></script>
         <script type="text/javascript" src="./js/toolbar.js"></script>
         <script type="text/javascript" src="ajax.js"></script>
-<!--        <script type="text/javascript" src="./js/filterBySkill.js"></script>-->
+        <!--        <script type="text/javascript" src="./js/filterBySkill.js"></script>-->
 
 
 </body>

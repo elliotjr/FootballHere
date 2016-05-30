@@ -11,6 +11,14 @@ $(".filterButton").click(function () {
     $(this).toggleClass("white");
 });
 
+$(".infoButton").mouseenter(function () {
+    $(".infoPane").removeClass("hidden");
+})
+
+$(".infoButton").mouseleave(function () {
+    $(".infoPane").addClass("hidden");
+})
+
 
 
 $(".gamesButton").click(function () {
