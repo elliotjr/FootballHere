@@ -27,7 +27,9 @@
         </noscript>
 
         <div id="adminArea">
-            <p>Welcome <?php echo $_SESSION['username'] ?></p>
+            <p>Welcome
+                <?php echo $_SESSION['username'] ?>
+            </p>
             <form class="logoutForm" action="logout.php" method="post">
                 <input class="logoutButton" type="submit" name="logout" value="Logout">
             </form>
@@ -110,9 +112,9 @@
 
             <div id="filters">
                 <nav id="skillLevel">
-                    <a id="beginnerSkill"href="#" value="1" class="skill white">Beginner</a>
-                    <a id="amateurSkill"href="#" value="2" class="skill white">Amateur</a>
-                    <a id="advancedSkill"href="#" value="3" class="skill white">Advanced</a>
+                    <a id="beginnerSkill" href="#" value="1" class="skill white">Beginner</a>
+                    <a id="amateurSkill" href="#" value="2" class="skill white">Amateur</a>
+                    <a id="advancedSkill" href="#" value="3" class="skill white">Advanced</a>
                 </nav>
             </div>
 
@@ -121,14 +123,20 @@
             </div>
 
             <div id="map"></div>
-            <div class="filteredEasy">
-              <?php include('filterBySkill.php'); getGameBySkill(1);?>
-            </div>
-            <div class="filteredMedium">
-              <?php getGameBySkill(2);?>
-            </div>
-            <div class="filteredHard">
-              <?php getGameBySkill(3);?>
+            
+            <div id="filteredResults" class="hidden">
+                <div class="filteredBeginner">
+                   <h1>Beginner</h1>
+                    <?php include('filterBySkill.php'); getGameBySkill(1);?>
+                </div>
+                <div class="filteredAmateur">
+                   <h1>Amateur</h1>
+                    <?php getGameBySkill(2);?>
+                </div>
+                <div class="filteredAdvanced">
+                   <h1>Advanced</h1>
+                    <?php getGameBySkill(3);?>
+                </div>
             </div>
         </main>
 
@@ -138,7 +146,7 @@
         <script type="text/javascript" src="./js/login.js"></script>
         <script type="text/javascript" src="./js/toolbar.js"></script>
         <script type="text/javascript" src="ajax.js"></script>
-        <script type="text/javascript" src="./js/filterBySkill.js"></script>
+<!--        <script type="text/javascript" src="./js/filterBySkill.js"></script>-->
 
 
 </body>

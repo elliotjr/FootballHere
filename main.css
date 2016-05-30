@@ -119,10 +119,6 @@ noscript p {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
 }
 
-.visible {
-    visibility: visible;
-}
-
 #inputForm h1 {
     text-align: center;
     font-size: 2.4em;
@@ -191,7 +187,7 @@ select {
     border-bottom: solid 1px #757575;
 }
 
-#inputForm input[type=submit] {
+#inputForm input[type=button]{
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -203,7 +199,7 @@ select {
     background-color: transparent;
 }
 
-#inputForm input[type=submit]:hover {
+#inputForm input[type=button]:hover {
     font-weight: 700;
 }
 
@@ -343,6 +339,7 @@ footer a:hover {
     margin-top: 10px;
 }
 
+/*
 .loginWrap {
     background: #FFFFFF;
     border-radius: 25px;
@@ -350,6 +347,7 @@ footer a:hover {
     margin-top: 50px;
     width: 60%;
 }
+*/
 
 #yourGames {
     margin-bottom: 10px;
@@ -397,4 +395,42 @@ footer a:hover {
     position: absolute;
     bottom: 12px;
     right: 20px;
+}
+
+
+#filteredResults {
+    margin: auto;
+    width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    
+    line-height: 1.2em;
+    text-align: center;
+}
+
+#filteredResults h1{
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#filteredResults div{
+    margin-bottom: 10px;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
 }

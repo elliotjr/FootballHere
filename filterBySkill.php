@@ -15,7 +15,7 @@ function getGameBySkill($skill) {
   $result = mysqli_query($link, $query);
 
   while ($row = mysqli_fetch_assoc($result)) {
-    echo $row['location'].", ".$row['date'];
+    echo $row['location'].", ".$row['date']."<br>";
   }
   $db->closeConnection();
 }

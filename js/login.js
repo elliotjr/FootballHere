@@ -9,6 +9,9 @@ $(document).ready(function () {
         $(this).removeClass('visible');
         $(".loginOverlay").removeClass('visible');
         
+        $("#filteredResults").addClass('hidden');
+        $(".filterButton").addClass('white');
+        
         returnToLoginPane();
     });
 });
@@ -18,8 +21,12 @@ $(document).ready(function () {
 $(document).keyup(function (e) {
     if (e.which === 27) {
         if ($('.darkOverlay').hasClass('visible')) {
-            $('.darkOverlay').toggleClass('visible');
-            $('.loginOverlay').toggleClass('visible');
+            $('.darkOverlay').removeClass('visible');
+            $('.loginOverlay').removeClass('visible');
+            
+            $("#filteredResults").addClass('hidden');
+            $(".filterButton").addClass('white');
+            
             
             returnToLoginPane();
         }
