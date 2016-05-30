@@ -58,6 +58,8 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 
     <head>
         <link rel="stylesheet" type="text/css" href="./main.css">
+        <meta name="description" content="Football Here Brisbane: Login">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
         <meta charset="utf-8">
         <title>Login | footballhere</title>
         <link rel="icon" type="image/png" href="./fh_favicon.png">
@@ -78,14 +80,14 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         <section class="loginOverlay visible">
             <div id="inputForm">
                 <form class="loginForm" action="login.php" method="post">
-                   
+
                    <h1>Login</h1>
-                    
+
                     <div class="formGroup">
                         <input type="text" name="username" required>
                         <label>Username</label>
                     </div>
-                    
+
                     <div class="formGroup">
                         <input type="password" name="password" required>
                         <label>Password</label>

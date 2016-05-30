@@ -4,6 +4,8 @@
 
 <head>
     <meta charset='utf-8' />
+    <meta name="description" content="Football Here Brisbane: Home Page">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <title>footballhere</title>
     <link rel="stylesheet" type="text/css" href="./main.css">
     <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
@@ -123,7 +125,7 @@
             </div>
 
             <div id="map"></div>
-            
+
             <div id="filteredResults" class="hidden">
                 <div class="filteredBeginner">
                    <h1>Beginner</h1>
