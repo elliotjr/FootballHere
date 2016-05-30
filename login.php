@@ -62,6 +62,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         <meta name="keywords" content="HTML,CSS,XML,JavaScript">
         <meta charset="utf-8">
         <title>Login | footballhere</title>
+        <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
         <link rel="icon" type="image/png" href="./fh_favicon.png">
     </head>
 
@@ -76,6 +77,16 @@ if (isset($_POST['username']) && isset($_POST['password'])){
             <h2>This site needs JavaScript to work properly!</h2>
             <p>Try turning JavaScript on, or use a different browser.</p>
         </noscript>
+        
+        <div class="infoButton">
+            <h1>&#63;</h1>
+        </div>
+        <div class="infoPane hidden">
+            <h1>About footballhere</h1>
+            <h2>&#9917;</h2>
+            <p>footballhere is a platform that connects people with like-minded people who want to play a game of social football. Simply find a game happening near you and show up!</p>
+            <p>You can also enter your own game onto the map, to attract new players and make new friends!</p>
+        </div>
 
         <section class="loginOverlay visible">
             <div id="inputForm">
@@ -99,6 +110,8 @@ if (isset($_POST['username']) && isset($_POST['password'])){
                 </form>
             </div>
         </section>
+    <script type="text/javascript" src="./js/toolbar.js"></script>
     </body>
+    
 
     </html>
