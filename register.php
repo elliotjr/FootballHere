@@ -38,7 +38,6 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
     <head>
         <link rel="stylesheet" type="text/css" href="./main.css">
         <script src="js/jquery-1.12.2.min.js"></script>
-       <!-- <script src="js/formval.js"></script> -->
         <meta charset="utf-8">
         <title>Register | footballhere</title>
         <link rel="icon" type="image/png" href="./fh_favicon.png">
@@ -53,54 +52,49 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
 
         <div class="loginOverlay visible">
             <div id="inputForm">
-                <form id="" id="register" action="register.php" method="post">
+                <form id="" id="register" action="register.php" method="post" autocomplete="off">
                     <h1>Register</h1>
-
-                    <div class="formGroup">
-                        <input type="text" id="r_email" name="email" required>
-                        <label>Email</label>
-                        <span class="error">This field is required</span>
-                    </div>
-
-                    <div class="formGroup">
-                        <input type="text" id="r_username" name="username" required>
-                        <label>Username</label>
-                        <span class="error">This field is required</span>
-                    </div>
-                    
-                    <div class="formGroup">
-                        <input type="password" id="r_password" name="password" required>
-                        <label>Password</label>
-                        <span class="error">This field is required</span>
-                    </div>
-
-                    <div class="formGroup">
-                        <input type="text" id="r_fname" name="fname" required>
+					
+					<div class="formGroup">
+                        <input type="text" id="fname" name="fname" required>
                         <label>First Name</label>
-                        <span class="error">This field is required</span>
                     </div>
                     
                      <div class="formGroup">
-                        <input type="text" id="r_lname" name="lname" required>
+                        <input type="text" id="lname" name="lname" required>
                         <label>Last Name</label>
-                        <span class="error">This field is required</span>
                     </div>
-                    
+					
                     <div class="formGroup">
-                        <input type="text" id="r_age" name="age" required>
-                        <label>Age</label>
-                        <span class="error">This field is required</span>
+                        <input type="text" id="username" name="username" required>
+                        <label>Username</label>
                     </div>
-                    
-                    <select name="skill" required>
+					
+                    <div class="formGroup">
+                        <input type="email" id="email" name="email" required>
+                        <label>Email</label>
+                    </div>
+					
+                    <div class="formGroup">
+                        <input type="password" id="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+					
+					<div class="formGroup">
+                        <input type="number" id="age" name="age" required>
+                        <label>Age</label>
+                    </div>
+
+					<select id="skill" name="skill" required>
                         <option value="">Select Skill Level</option>
                         <option value="1">Beginner</option>
                         <option value="2">Amateur</option>
                         <option value="3">Advanced</option>
                     </select>
+
                     <br>
                     <br>
-                    <input type="submit" id="r_submit" name="name" value="Register">
+                    <input type="submit" id="submit" name="name" value="Register">
                 </form>
             </div>
         </div>
