@@ -50,7 +50,7 @@
         <div class="darkOverlay"></div>
 
         <div class="loginOverlay">
-            <div id="inputForm">
+            <div id="inputForm" role="Submission Form">
                 <h1>Add a Game</h1>
                 <form class="addGame" action="addGameToDb.php" method="post">
 
@@ -96,7 +96,7 @@
                         <label>Players Needed</label>
                     </div>
 
-                    <select name="skill" required>
+                    <select role="Dropdown" name="skill" required>
                         <option value="">Select Skill Level</option>
                         <option value="1">Beginner</option>
                         <option value="2">Amateur</option>
@@ -104,7 +104,7 @@
                     </select>
 
 
-                    <input class="save" type="button" value="Submit" />
+                    <input role="submit button" class="save" type="button" value="Submit" />
                 </form>
 
             </div>

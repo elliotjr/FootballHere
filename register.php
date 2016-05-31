@@ -50,7 +50,7 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
             <h1>football</h1>
             <h1 class="bold">here</h1>
         </header>
-        
+
         <div class="infoButton">
             <h1>&#63;</h1>
         </div>
@@ -97,7 +97,7 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
                         <label>Age</label>
                     </div>
 
-					<select id="skill" name="skill" required>
+					<select id="skill" name="skill" required role="skill">
                         <option value="">Select Skill Level</option>
                         <option value="1">Beginner</option>
                         <option value="2">Amateur</option>
@@ -113,7 +113,7 @@ if (isset($_POST['skill']) && isset($_POST['username']) && isset($_POST['age']) 
 
     <script type="text/javascript" src="./js/toolbar.js"></script>
     </body>
-    
-    
+
+
 
     </html>

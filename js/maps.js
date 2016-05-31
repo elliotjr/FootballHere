@@ -78,8 +78,6 @@ function initMap() {
           url: "joinGame.php",
           success: function(){
             alert("You Are Now Attending This Game");
-            var $game = "<div class='yourGames'><h2>"+user+": "+gameid+"</h2></div>";
-            $("#yourGames").append($game);
           }
       });
       });

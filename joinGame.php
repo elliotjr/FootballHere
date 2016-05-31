@@ -17,7 +17,7 @@ function checkIfAttending() {
 }
 
 /**
-*Returns true if there are any more spaces for a game. Else, return false. 
+*Returns true if there are any more spaces for a game. Else, return false.
 */
 function needsPlayers($link, $gameid) {
   $morePlayers = False;
@@ -45,4 +45,4 @@ if (isset($_SESSION['username'])) {
     $result = mysqli_query($link, $query);
     $db->closeConnection();
   }
-}
+} 

@@ -77,7 +77,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
             <h2>This site needs JavaScript to work properly!</h2>
             <p>Try turning JavaScript on, or use a different browser.</p>
         </noscript>
-        
+
         <div class="infoButton">
             <h1>&#63;</h1>
         </div>
@@ -90,7 +90,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 
         <section class="loginOverlay visible">
             <div id="inputForm">
-                <form class="loginForm" action="login.php" method="post">
+                <form class="loginForm" action="login.php" method="post" role="login">
 
                    <h1>Login</h1>
 
@@ -103,7 +103,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
                         <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
-                    <input type="submit" name="name" value="Login">
+                    <input type="submit" name="name" value="Login" role="Submit Button">
                     <br>
                     <p>Don't have an account?</p>
                     <a class="register" href="register.php">Register</a>
@@ -112,6 +112,6 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         </section>
     <script type="text/javascript" src="./js/toolbar.js"></script>
     </body>
-    
+
 
     </html>
